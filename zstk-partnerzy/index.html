@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>ZSTK Lublin — Partnerzy i ścieżki kariery</title>
+<script>
+const QR_CODES = {
+  plk: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYAQAAAAA+F9ntAAACg0lEQVR4nO2a22rkMBBETy3+/1+uPPTFHshCmIlJyygQMtGch6IR1TfJ/Pjn38/RzW52sw9gscshjLHzAwbnb3ET9K7GHgAGEBbCSAbLICPXtzP0rsYeAChjXBHGIMt6+XaC3pVZhUNIJoxB+H/sXRqexh7fnDl8IR3ifg1PZiO+GcX0BUAWRrbc347Quxp7QCQvgPJbh/fKEeu7NTyZPTjvJzKR1OJvnJ8OMUHvauwBabRdK8QfY7lKiDDjCXqXZIXAJkoHO2thC+Q+n6N3IbbrX1UfobThuMmmW4wReldjM4Ndq7G0CAtXsxHBn6B3TdYIRYiRYwyRlZl2f/wJm0WCXLdY3V2cuW37w2esZBTBzKR2Xl2HOd+u4aEsDjuwHQPKHEsSRz2r3PPJ99lyXzlLhbq+ZPJTjIGn6F2NreK3yjRhKSOM7TKIKXpXYyO2GdEqe0Vd4t5xTNG7Hltj9bTbiHVc6Fxp3K/hmWzOH6JaUFlBW0L0yXt/8TZbLVu3cfia1yCbuJ3fPmHt9N/8L65v7IkU9fHtGp7LRgQNqJsLZRl8zXNT9K7E5v4iy93oi3uow+XTjRqezPb7hzaDKiTULXJe4RF6V2NjPyTIbZtBzht7LYHv1PBk9lI/VBFBLzrzlUl1yhP0rsZmb3ZOHWrgQ0146OMJeldjrw9Iuv6tPBe1b701GaF3NfbgXAjVWU7YY9yeie9ODU9mX95P9jou5g5xt88d0QS9q7HX95NdBrdrdPWw/eEX2Fi62VJM0CxV1vPu336BrU7NuY+LqXuviMbpXYbNQiy7ilgTnYvNvb94n72+n5SpR5M1BI7jnPpM0Lsa+/KA+o80bHazm53JfgE6glaID8utuQAAAABJRU5ErkJggg==",
+  intercity: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAbgAAAG4AQAAAAAfsc8eAAAD5UlEQVR4nO1c0W4bMQwjh/z/L3MPEmUnTYeh7Xa2T1e0aS9H1IIgS6LoUPjS9etrsMY1rnGNOwb3AMD4VRQACgAoQhQogAIBxc14ch/7Tsc9ACBcFi92n1juJCCG6/LJfey7B44kABIkCUIRfIAEQAIVrssnd7PvHjiBkkCQgJjOovdU6BPc/15n48b1eL1BsTbJcJkgjgD85v9r3M/iwn+5N0bQaapYwo+EntLjBets3CeXZJfoL74Ks4t9p+Oo1z+jdYDjD3L0sfPfejhIgiIKlfUmVPuk6luQJPjpXey7Ay5bPEAipYy+8GhsmqIogtFjXLXOxr3HRalJAFRUMBJAyDvoiEH/3Mq+k3G5K45OXeUooXZWCPKmqq5fFsIF/0lF80AB0Tsk00lvrQCKk7linY17f1WzHoVnvLzWpMFiT8z2PvbdAycIrLgTGX9F7w74hRmrl62zce9wQV4riTIg605S5MyaUX5vL/vugGNNihB+Kx4tY7EyY/cPq+GCWhHdzOe+OSLR9yI+1fO/9XCqBj0aB8qcdjhSwkiCF66zcR9xJjgVqTDcRXfq4c6RCaMO3cm+03HWuBAqFUy8S6VHTaMVq72Tfcfj5NkfkIN3oFQU4siIYwS4lX0H41Jg5mKl+vO6E139KDzzuV3sOx2Xu2UGWTJkcE1KmJFhTuDZ+W9FnHlOFds535nnuer+YTmc01rwMLSkIlnPkO2ODfa6dTbuw/UAJp7TOms8K3aVRc0YFG5j3+m4kfdqzlBcy8iGyBLG2XIf+26CE0nP150Blbxn3Zl0obvZdzZu5L/QzycdmsqXciExWJmt7DsYl4dUODq82iI90K1nssUXe/9cC5eql9hC4/gDhyIt5rlyOdP930q4Ov/n+mSqUyr1ZS1qQrvjbx2c9WcW5+Y9T/3sQKikvWr97mK4nL17YpuFypMDAaQ4rfv3pXB5/pYmr+Fx4DStjZbQOVCXrLNxf8AxChVXnWKp592+OxLp37ay72Ccz78z2c7w0QjB0nxOA6SuX9bCiZH0XGRmrRLVKJ+aQrOiW9l3Mi7O37I8xjH3K7nnmP3BIvtt7Dsdl/2fLHLJaVEFXhHcs/jsgnU27v01n3Vw1svJwxyHrBQJtH5iIdz8+UvmrDE5DUgxKJWfQsGevy+Ee/r8JU8Bi+vEpBm0hKL5z5Vwrl9qRDTOAOZRJIGTuNfziF3suxUuhfKT2Nonk+hhLhjK+i3tOxyX4yPkLEnwh8OkBiaeUOtfFsKNOsW6+WKrPb4tcfZc1Oxi3+m40p8BdYpsdBKmzmA1TLWEu9h3Ou7lrPs//3+Na1zjGncK7jckDE4fIoy+5wAAAABJRU5ErkJggg==",
+  cargo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYAQAAAAA+F9ntAAACcklEQVR4nO2a227jQAxDDxf5/1/mPugSt0WBwtmLFEyKoI59HoiBwaGkkfnx59fP0cMe9rBvwD4AxaVlyK/A8cD1dIbebewDwADCAtd/Cay4RSz1BL3b2AcAtYpGxsJxTdyupxP0bmbDDiwsZLCQ/rGGd2Mfn34LhTWgL+wEvdvYWN8KwTIgyzK52V2eTtC7jcWu5fM3f81N0LuN1aV+C0dwXrsCxV/X8O6sACHhzgt5bSNJOvnsLhuOG8FMPAsLo6gs4pY8RO9K1qCu4ohwJkRas2N55+hdxMb+ZjvNwR8egXOP89nfbrGq2rgMInzBaQpZwun0H15glV2HdIja2zr9ShHipujdxD6gN7luNshpwVXHHf+9y5Y/RG9HVruB3L3K7PhM0LuNrfdXFtcIQcbiMmMd/73Ffs2/3QGO1W2fmKF3KStZOBNEb23kKmcQHqR3GRv5V2kLNcfIJlp2LCfp3cNm/7cswFHIleu2/5739yabHd/LDSCTWjYgVEXdBL0bWVkSghhchNtKz2XPymOK3n2sXWPNfH117Umc9/c+q6okuoqoIf2lrEt3nqB3G9v1RYayygxWD+hVBjxB7za2+2dZY3CpLoCreTFC71LWck+GooZTTDezzX7y7wts1hWqfm9ECPVbXBY8Re8m9mP0reZZNHx6GpfOMUHvNvZ6fhIjZ2H8tGJ1QpugdyVrxxQuM4Nqfpxn/tDpP9xlr+cns0Vp0KXNHtzp/77OOoOD5FhhqJny8Yc/wbbTxilglLk4KuV5etewechP2Y+M6bH7zDXHf++yn85Pphm4f7uX+ZwvucNe8+//0nDYwx52Jvsb7BROg65FZqkAAAAASUVORK5CYII=",
+  energetyka: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4AQAAAADnBNLHAAACAElEQVR4nO2a22rEMAxEZ0r//5dPHyTZXkqTQGHtBWkhmPVAIqHLSLbRI/l6Bmtc4xr3Rty3JMcyItnCGMmsO6frsdN+YTnLwmlFpQVz53w9ttpPLu9DshDCMsvO6XqcgbMsYUsSFb1veO/n4r6XNbLDhP6FO12PvfYrEhglI7Kg8bJzuh5b7ZfuZsYvkt/iiKfrsdN+owWxonKMsjubk9P12Mr/wlxkyWAhLpQVT9djf/yiyHmYSaJHAJ+ux1YcJO+L2hslZDLC7d93PM6CCFWEBIY0pbv/uJLJXzx6DiqY5eYvNzKnBBRn0awis4CcrsdOHELIJtOfRbihJWct/gQ9duAESVZigYSI53zA6Xrs5c9IMTSQsQf/k0YGPF2Pzf6XJWNpOPLP9r973Gx1cRqzQtq58RF67MBl/+GX8os02pCenz7AIVz2MmQyTPO5+fM1zghDuqGqH64RFs1fbnEmWZ+jamC5kmHnv3tcNrwY2eWHqPvfO4n6EVPTjN6cYVFtXdvvQsy69jx0qxP0HASersdO/6tbBuMUyXV85JzDnK/H1vlLze+LsoyDuDyOa//7U17uHxThy8lznaO3/z3F4Wg4bNf1F9z8+SkORc8bQR2R7J6/XMnr/YPsd4nhafUfO7/vdNzr/QMpYhhqrk/X30tZ+d8739u4xjXu/7gfzU7/Vvv07ukAAAAASUVORK5CYII=",
+  polregio: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYAQAAAACv9dQhAAABoUlEQVR4nO2ZS27DMBBDyaD3v/LrgiNbLlpkVWmASFnYUQiEGMyHlIzertd7yMEczMH8tmBUGBK1JcT9ezfOKzFfUoXFkiQsyXje7cZ5eXzkRANh3blTu+0478JgC+RKpe18umGMZCNh8QdmJZ8OmNRX9WVhbMbGiFE3zsvjU/VkjHHyiLvKunFeiTGPLyY7jwLrxnl1fKZcqbeMMefRjvOG+U7iZCtvoqqOxXxaYlJXlTW6qoujfySAWApKIz7Mxaf7i5ckk5YsKblTn+HMOnJehcl8H4LwIQzPfFfig2piGU19qNRQP87r51e6jmO9KBnko58vjCXXuQ9G5TLMme+SfDUgnJleIhF7B59OmKhBMbRytR8lTHEb3Tivx6Qz4woP4+jQp77q6en0J+XlBGgTny6Y2b/7hy8dYqgb59XzvYQgET3VrqfIdeO8XP9cNxUeKlpDEn16/3ncX9S9jocdizFrx3mDfs4i5XUpIZ38mTH3+U8aUPmN1pzXYMZRhu1bRDMGWE/OazDmnl++XPzjirkd513657//62AO5tMw3+FTyQ37euXzAAAAAElFTkSuQmCC",
+};
+</script>
+<style>
+  :root{
+    --navy: #0b2545;
+    --navy-deep: #061a33;
+    --steel: #3a5a78;
+    --signal-amber: #ff9f1c;
+    --signal-red: #e63946;
+    --rail-green: #2a9d8f;
+    --paper: #f4f1ea;
+    --paper-dim: #e7e2d6;
+    --ink: #11202f;
+    --ink-soft: #4a5a68;
+    --display: 'Oswald', 'Arial Narrow', sans-serif;
+    --body: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+    --mono: 'JetBrains Mono', 'Courier New', monospace;
+  }
+
+  @font-face{
+    font-family: 'Oswald';
+    src: local('Oswald');
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+
+  html, body{
+    width:100%; height:100%;
+    background: var(--navy-deep);
+    color: var(--paper);
+    font-family: var(--body);
+    overflow:hidden;
+    -webkit-tap-highlight-color: transparent;
+    user-select:none;
+  }
+
+  #app{
+    width:100vw; height:100vh;
+    display:flex;
+    flex-direction:column;
+    position:relative;
+  }
+
+  /* ===== HEADER : departure-board style ===== */
+  header{
+    background: var(--navy);
+    border-bottom: 4px solid var(--signal-amber);
+    padding: 28px 48px 22px;
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    position:relative;
+    flex-shrink:0;
+  }
+  header::before{
+    content:'';
+    position:absolute;
+    bottom:-4px; left:0;
+    width:140px; height:4px;
+    background: var(--signal-red);
+  }
+  .brand-block{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+  }
+  .brand-eyebrow{
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 0.35em;
+    color: var(--signal-amber);
+    text-transform:uppercase;
+  }
+  .brand-title{
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 40px;
+    letter-spacing: 0.01em;
+    line-height: 1.05;
+    text-transform:uppercase;
+    color: var(--paper);
+  }
+  .brand-sub{
+    font-size: 15px;
+    color: var(--paper-dim);
+    font-weight: 400;
+    margin-top: 2px;
+  }
+  .clock-block{
+    font-family: var(--mono);
+    text-align:right;
+    color: var(--paper-dim);
+    font-size: 14px;
+    line-height:1.6;
+  }
+  .clock-time{
+    font-size: 30px;
+    color: var(--signal-amber);
+    letter-spacing: 0.05em;
+    font-weight:700;
+  }
+
+  /* ===== NAV TABS (category filter) ===== */
+  nav{
+    display:flex;
+    gap: 0;
+    background: var(--navy-deep);
+    padding: 0 40px;
+    flex-shrink:0;
+    border-bottom: 1px solid rgba(244,241,234,0.08);
+  }
+  .tab{
+    font-family: var(--display);
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    font-size: 17px;
+    font-weight:500;
+    color: var(--paper-dim);
+    padding: 18px 26px 14px;
+    cursor:pointer;
+    border-bottom: 3px solid transparent;
+    transition: color .2s, border-color .2s;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .tab .count{
+    font-family: var(--mono);
+    font-size:12px;
+    background: rgba(244,241,234,0.1);
+    padding: 2px 7px;
+    border-radius: 3px;
+    color: var(--paper-dim);
+  }
+  .tab.active{
+    color: var(--paper);
+    border-bottom-color: var(--signal-amber);
+  }
+  .tab.active .count{
+    background: var(--signal-amber);
+    color: var(--navy-deep);
+  }
+  .tab:active{ opacity:0.7; }
+
+  /* ===== MAIN GRID ===== */
+  main{
+    flex:1;
+    overflow-y:auto;
+    padding: 32px 40px 50px;
+    background:
+      radial-gradient(circle at 85% 0%, rgba(255,159,28,0.06), transparent 45%),
+      var(--navy-deep);
+  }
+  .section-label{
+    font-family: var(--mono);
+    font-size:13px;
+    letter-spacing:0.25em;
+    color: var(--rail-green);
+    text-transform:uppercase;
+    margin: 28px 0 14px;
+    display:flex;
+    align-items:center;
+    gap:14px;
+  }
+  .section-label::after{
+    content:'';
+    flex:1;
+    height:1px;
+    background: rgba(244,241,234,0.12);
+  }
+  .section-label:first-child{ margin-top:0; }
+
+  .grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 18px;
+  }
+
+  .card{
+    background: linear-gradient(165deg, #132b4a, #0d2038);
+    border: 1px solid rgba(244,241,234,0.08);
+    border-radius: 10px;
+    padding: 22px 22px 20px;
+    cursor:pointer;
+    transition: transform .15s, border-color .15s, box-shadow .15s;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    min-height: 178px;
+    position:relative;
+    overflow:hidden;
+  }
+  .card::before{
+    content:'';
+    position:absolute;
+    top:0; left:0;
+    width:4px; height:100%;
+    background: var(--cat-color, var(--signal-amber));
+  }
+  .card:active{
+    transform: scale(0.97);
+    border-color: var(--cat-color, var(--signal-amber));
+  }
+  .card-logo{
+    height: 52px;
+    display:flex;
+    align-items:center;
+  }
+  .card-logo img{
+    max-height:52px;
+    max-width: 170px;
+    object-fit:contain;
+    filter: brightness(0) invert(1);
+    opacity:0.92;
+  }
+  .card-logo.keep-color img{
+    filter:none;
+    background: rgba(244,241,234,0.94);
+    padding: 6px 10px;
+    border-radius: 5px;
+  }
+  .card-name{
+    font-family: var(--display);
+    font-size: 19px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:0.01em;
+    color: var(--paper);
+  }
+  .card-tag{
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--paper-dim);
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+  }
+  .card-arrow{
+    margin-top:auto;
+    align-self:flex-end;
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--cat-color, var(--signal-amber));
+    display:flex;
+    align-items:center;
+    gap:6px;
+  }
+
+  /* category accent colors via inline style var --cat-color */
+
+  /* ===== DETAIL OVERLAY ===== */
+  .overlay{
+    position:fixed;
+    inset:0;
+    background: rgba(6,26,51,0.7);
+    backdrop-filter: blur(6px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    opacity:0;
+    pointer-events:none;
+    transition: opacity .25s;
+    z-index: 50;
+    padding: 40px;
+  }
+  .overlay.open{
+    opacity:1;
+    pointer-events:auto;
+  }
+  .detail-panel{
+    background: linear-gradient(170deg, #14304f, #0c2138);
+    border: 1px solid rgba(244,241,234,0.12);
+    border-radius: 16px;
+    max-width: 760px;
+    width:100%;
+    max-height: 86vh;
+    overflow-y:auto;
+    padding: 0;
+    transform: translateY(24px) scale(0.97);
+    transition: transform .25s;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+  }
+  .overlay.open .detail-panel{
+    transform: translateY(0) scale(1);
+  }
+  .detail-head{
+    padding: 38px 40px 28px;
+    border-bottom: 3px solid var(--cat-color, var(--signal-amber));
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap: 24px;
+  }
+  .detail-logo-wrap{
+    background: rgba(244,241,234,0.95);
+    border-radius:10px;
+    padding: 14px 20px;
+    display:flex;
+    align-items:center;
+    flex-shrink:0;
+  }
+  .detail-logo-wrap img{
+    height: 48px;
+    max-width: 190px;
+    object-fit:contain;
+  }
+  .detail-titles{ flex:1; }
+  .detail-tag{
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--cat-color, var(--signal-amber));
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    margin-bottom:6px;
+  }
+  .detail-name{
+    font-family: var(--display);
+    font-size: 32px;
+    font-weight:600;
+    text-transform:uppercase;
+    color: var(--paper);
+    line-height:1.1;
+  }
+  .close-btn{
+    background: rgba(244,241,234,0.08);
+    border: 1px solid rgba(244,241,234,0.18);
+    color: var(--paper-dim);
+    width: 44px; height:44px;
+    border-radius:50%;
+    font-size: 22px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    flex-shrink:0;
+    line-height:1;
+  }
+  .close-btn:active{ background: rgba(244,241,234,0.18); }
+
+  .detail-body{
+    padding: 30px 40px 40px;
+    display:flex;
+    flex-direction:column;
+    gap: 26px;
+  }
+  .detail-desc{
+    font-size: 17px;
+    line-height:1.65;
+    color: var(--paper-dim);
+  }
+  .detail-block-title{
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color: var(--rail-green);
+    margin-bottom: 10px;
+  }
+  .pill-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap: 10px;
+  }
+  .pill{
+    background: rgba(244,241,234,0.07);
+    border: 1px solid rgba(244,241,234,0.14);
+    color: var(--paper);
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-weight:500;
+  }
+  .detail-footer-note{
+    font-size: 14px;
+    color: var(--paper-dim);
+    border-top: 1px solid rgba(244,241,234,0.1);
+    padding-top: 18px;
+    font-style:italic;
+  }
+
+  /* QR sekcja */
+  .qr-section{
+    display:flex;
+    align-items:center;
+    gap: 24px;
+    padding: 20px;
+    background: rgba(244,241,234,0.05);
+    border: 1px solid rgba(244,241,234,0.1);
+    border-radius: 10px;
+  }
+  .qr-canvas-wrap{
+    background: white;
+    padding: 8px;
+    border-radius: 6px;
+    flex-shrink: 0;
+  }
+  .qr-text{ flex:1; }
+  .qr-label{
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--rail-green);
+    margin-bottom: 6px;
+  }
+  .qr-title{
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--paper);
+    margin-bottom: 4px;
+  }
+  .qr-hint{
+    font-size: 13px;
+    color: var(--paper-dim);
+  }
+
+  /* scrollbar */
+  main::-webkit-scrollbar, .detail-panel::-webkit-scrollbar{ width:10px; }
+  main::-webkit-scrollbar-thumb, .detail-panel::-webkit-scrollbar-thumb{
+    background: rgba(244,241,234,0.15);
+    border-radius: 5px;
+  }
+  main::-webkit-scrollbar-track, .detail-panel::-webkit-scrollbar-track{ background:transparent; }
+
+  /* idle footer ticker */
+  .ticker{
+    flex-shrink:0;
+    background: var(--navy);
+    border-top: 1px solid rgba(244,241,234,0.1);
+    padding: 12px 40px;
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--paper-dim);
+    letter-spacing:0.04em;
+    display:flex;
+    align-items:center;
+    gap:14px;
+  }
+  .ticker .dot{
+    width:8px;height:8px;border-radius:50%;
+    background: var(--rail-green);
+    flex-shrink:0;
+    box-shadow: 0 0 8px var(--rail-green);
+  }
+</style>
+</head>
+<body>
+
+<div id="app">
+
+  <header>
+    <div class="brand-block">
+      <div class="brand-eyebrow">Zespół Szkół Transportowo-Komunikacyjnych · Lublin</div>
+      <div class="brand-title">Partnerzy &amp; ścieżki kariery</div>
+      <div class="brand-sub">Dotknij firmę albo uczelnię, aby zobaczyć możliwości praktyk, staży i współpracy</div>
+    </div>
+    <div class="clock-block">
+      <div class="clock-time" id="clock">--:--</div>
+      <div id="dateLabel">—</div>
+    </div>
+  </header>
+
+  <nav id="tabs">
+    <div class="tab active" data-cat="all">Wszyscy <span class="count" id="count-all">0</span></div>
+    <div class="tab" data-cat="kolej">Kolej &amp; transport <span class="count" id="count-kolej">0</span></div>
+    <div class="tab" data-cat="przemysl">Przemysł &amp; technika <span class="count" id="count-przemysl">0</span></div>
+    <div class="tab" data-cat="uczelnie">Uczelnie &amp; certyfikaty <span class="count" id="count-uczelnie">0</span></div>
+  </nav>
+
+  <main id="main">
+    <div id="gridHost"></div>
+  </main>
+
+  <div class="ticker">
+    <span class="dot"></span>
+    <span>Wybierz partnera, aby poznać oferowane zawody, programy stażowe i zakres współpracy ze szkołą.</span>
+  </div>
+
+</div>
+
+<div class="overlay" id="overlay">
+  <div class="detail-panel" id="detailPanel"></div>
+</div>
+
+<script>
+const CATS = {
+  kolej:    { label: 'Kolej & transport', color: '#ff9f1c' },
+  przemysl: { label: 'Przemysł & technika', color: '#e63946' },
+  uczelnie: { label: 'Uczelnie & certyfikaty', color: '#2a9d8f' }
+};
+
+const PARTNERS = [
+  {
+    id:'plk', cat:'kolej', name:'PKP Polskie Linie Kolejowe S.A.', logo:'img/plk.png', keepColor:false,
+    tag:'Zarządca infrastruktury kolejowej',
+    praktyki:'https://www.plk-sa.pl/kariera/dla-uczniow-szkol-srednich-i-studentow',
+    desc:'Spółka odpowiada za utrzymanie i rozwój narodowej sieci linii kolejowych w Polsce — to jeden z największych pracodawców w branży kolejowej w kraju. Uczniowie kierunku technik transportu kolejowego mają tu zapewnione praktyki zawodowe oraz wykłady prowadzone przez pracowników PLK.',
+    paths:['Technik transportu kolejowego','Praktyki zawodowe','Wykłady branżowe'],
+    note:'ZSTK jako jedyna szkoła średnia w Lublinie kształci w tradycji kierunków kolejowych.'
+  },
+  {
+    id:'intercity', cat:'kolej', name:'PKP Intercity S.A.', logo:'img/intercity.png', keepColor:true,
+    tag:'Narodowy przewoźnik dalekobieżny',
+    praktyki:'https://www.intercity.pl/pl/site/o-nas/praca/praca-w-pkp-intercity/uczniowie-i-studenci/wspolpraca-ze-szkolami-ponadpodstawowymi.html',
+    desc:'PKP Intercity objęło patronatem kierunki technik mechatronik oraz technik robotyk, a wcześniej wspierało technika transportu kolejowego. Spółka zatrudnia w Lublinie około 250 osób, a po zakończeniu rozbudowy bocznicy planowane jest dodatkowe 150 etatów.',
+    paths:['Technik mechatronik','Technik robotyk','Gwarancja zatrudnienia po szkole','Program stypendialny'],
+    note:'Uczniowie klas patronackich mają zapewnione zatrudnienie w strukturach przewoźnika.'
+  },
+  {
+    id:'lhs', cat:'kolej', name:'PKP LHS — Linia Hutnicza Szerokotorowa', logo:'img/lhs.png', keepColor:true,
+    tag:'Operator szerokotorowej linii kolejowej',
+    praktyki:'',
+    desc:'Spółka z Grupy PKP zarządzająca unikalną w Polsce linią o szerokim rozstawie szyn, łączącą granicę wschodnią z centrum kraju. Przedstawiciele firmy biorą udział w wydarzeniach szkolnych i programach współpracy z klasami kolejowymi.',
+    paths:['Technik transportu kolejowego','Wizyty branżowe','Wymiana doświadczeń'],
+    note:'Jeden z partnerów obecnych podczas Święta Szkoły ZSTK.'
+  },
+  {
+    id:'cargo', cat:'kolej', name:'PKP Cargo S.A.', logo:'img/cargo.png', keepColor:true,
+    tag:'Największy przewoźnik towarowy w Polsce',
+    praktyki:'https://www.pkpcargo.com/pl/kariera/dla-studentow-i-absolwentow/',
+    desc:'PKP Cargo to kluczowy gracz na rynku przewozów towarowych, oferujący uczniom kierunków logistycznych i transportowych wgląd w realne procesy spedycji i zarządzania flotą kolejową.',
+    paths:['Technik logistyk','Technik spedytor','Wycieczki zawodowe'],
+    note:'Część szerokiej sieci partnerstw branżowych ZSTK w sektorze kolejowym.'
+  },
+  {
+    id:'energetyka', cat:'kolej', name:'PKP Energetyka', logo:'img/energetyka.png', keepColor:true,
+    tag:'Dostawca energii dla sektora kolejowego',
+    praktyki:'https://pgeenergetykakolejowa.pl/strona/staz-i-praktyki',
+    desc:'Spółka odpowiada za zasilanie trakcji elektrycznej i infrastruktury energetycznej kolei w Polsce. Naturalny partner dla uczniów kierunku technik elektroenergetyk transportu szynowego.',
+    paths:['Technik elektroenergetyk transportu szynowego','Staże techniczne'],
+    note:'Współpraca obejmuje zagadnienia związane z zasilaniem i automatyką trakcyjną.'
+  },
+  {
+    id:'polregio', cat:'kolej', name:'POLREGIO', logo:'img/polregio.png', keepColor:true,
+    tag:'Przewoźnik regionalny',
+    praktyki:'https://polregio.pl/pl/kariera/',
+    desc:'Największy przewoźnik kolejowy w regionalnym ruchu pasażerskim w Polsce. Dla uczniów ZSTK to okazja do poznania pracy drużyn pociągowych, obsługi pasażerskiej i planowania rozkładów jazdy.',
+    paths:['Technik transportu kolejowego','Praktyki zawodowe','Poznanie pracy drużyn pociągowych'],
+    note:'Partner wspierający kształcenie w zawodach związanych z przewozami regionalnymi.'
+  },
+  {
+    id:'dbschenker', cat:'przemysl', name:'DB Schenker', logo:'img/dbschenker.png', keepColor:true,
+    tag:'Globalny operator logistyczny',
+    desc:'Jedna z największych firm logistycznych na świecie, obecna w branży transportu drogowego, lotniczego, morskiego i kolejowego. Dla uczniów technika logistyka i spedytora to partner dający wgląd w międzynarodowe łańcuchy dostaw.',
+    paths:['Technik logistyk','Technik spedytor','Praktyki w międzynarodowej spedycji'],
+    note:'Współpraca z wiodącymi przedsiębiorcami branży TSL na Lubelszczyźnie.'
+  },
+  {
+    id:'sipma', cat:'przemysl', name:'SIPMA S.A.', logo:'img/sipma.png', keepColor:true,
+    tag:'Producent maszyn rolniczych',
+    desc:'Lubelski producent maszyn i urządzeń dla rolnictwa, prowadzący zajęcia praktyczne dla uczniów kierunku technik mechatronik — w tym pracę z systemami PLC, diagnostyką układów mechatroniczno-elektronicznych i automatyką przemysłową.',
+    paths:['Technik mechatronik','Zajęcia praktyczne na terenie zakładu','Programowanie sterowników S7-1200'],
+    note:'Zajęcia odbywają się w pracowniach wyposażonych w sterowniki PLC i tokarki CNC.'
+  },
+  {
+    id:'chropynska', cat:'przemysl', name:'CHROPYŃSKA', logo:'img/mw.png', keepColor:true,
+    tag:'Firma technologiczno-przemysłowa',
+    desc:'Przedstawiciele firmy odwiedzili ZSTK, prowadząc spotkania dla uczniów kierunków technik robotyk i technik mechatronik — niezwykła szansa na poznanie realnych zastosowań automatyki i robotyki w przemyśle.',
+    paths:['Technik robotyk','Technik mechatronik','Spotkania branżowe'],
+    note:'Wizyta firmy była częścią programu zbliżania uczniów z realnym przemysłem.'
+  },
+  {
+    id:'mikrotik', cat:'przemysl', name:'MikroTik Akademia', logo:'img/mikrotik.png', keepColor:true,
+    tag:'Certyfikacja sieciowa MTCNA',
+    desc:'ZSTK podejmuje starania o akredytację jako Akademia MikroTik — krok w rozwoju oferty edukacyjnej w obszarze technologii sieciowych i cyberbezpieczeństwa. Program pozwala uczniom zdobywać uznawane w branży certyfikaty sieciowe już w trakcie nauki.',
+    paths:['Technik informatyk','Certyfikat MTCNA','Konfiguracja routerów i sieci VPN'],
+    note:'Część szerszej strategii szkoły w obszarze cyberbezpieczeństwa i sieci komputerowych.'
+  },
+  {
+    id:'wat', cat:'uczelnie', name:'Wojskowa Akademia Techniczna', logo:'img/wat.png', keepColor:true,
+    tag:'Uczelnia wojskowo-techniczna, Warszawa',
+    desc:'Jedna z czołowych polskich uczelni technicznych, z którą ZSTK współpracuje w zakresie kierunków logistycznych, mechatronicznych i informatycznych — dając uczniom dostęp do wykładów, warsztatów i laboratoriów na poziomie akademickim.',
+    paths:['Technik logistyk','Technik mechatronik','Technik informatyk','Wykłady i laboratoria'],
+    note:'Współpraca obejmuje także kierunki kolejowe oraz cyberbezpieczeństwo.'
+  },
+  {
+    id:'pollub_ei', cat:'uczelnie', name:'Politechnika Lubelska — Elektrotechnika i Informatyka', logo:'img/pollub_ei.png', keepColor:true,
+    tag:'Wydział Elektrotechniki i Informatyki',
+    desc:'Wydział współpracujący z ZSTK w zakresie kierunku technik informatyk — uczniowie mają dostęp do warsztatów, pokazów sprzętu i szkoleń prowadzonych przez wykładowców akademickich.',
+    paths:['Technik informatyk','Warsztaty i pokazy','Ścieżka kontynuacji na studia'],
+    note:'Współpraca ułatwia uczniom przejście od kształcenia zawodowego do studiów technicznych.'
+  },
+  {
+    id:'pollub_m', cat:'uczelnie', name:'Politechnika Lubelska — Wydział Mechaniczny', logo:'img/pollub_m.png', keepColor:true,
+    tag:'Wydział Mechaniczny',
+    desc:'Partner akademicki dla kierunków mechatronik, logistyk i transport kolejowy — zapewnia uczniom dostęp do laboratoriów, demonstracji sprzętu i wykładów branżowych prowadzonych przez specjalistów uczelni.',
+    paths:['Technik mechatronik','Technik logistyk','Laboratoria i demonstracje'],
+    note:'Jedna z trzech uczelni technicznych objętych stałą współpracą ZSTK.'
+  },
+  {
+    id:'up', cat:'uczelnie', name:'Uniwersytet Przyrodniczy w Lublinie', logo:'img/up.png', keepColor:false,
+    tag:'Uczelnia przyrodnicza',
+    desc:'Uczniowie ZSTK biorą udział w wydarzeniach branżowych organizowanych na terenie uniwersytetu, m.in. w Dniu Logistyka — okazji do udziału w wykładach branżowych i spotkaniach z przedstawicielami biznesu.',
+    paths:['Technik logistyk','Wydarzenia branżowe','Spotkania z biznesem'],
+    note:'W kwietniu 2026 uczniowie klasy 2L wzięli udział w Dniu Logistyka na UMCS i UP.'
+  },
+  {
+    id:'wsei', cat:'uczelnie', name:'Akademia WSEI w Lublinie', logo:'img/wsei.png', keepColor:false,
+    tag:'Wyższa Szkoła Ekonomii i Innowacji',
+    desc:'Uczelnia współpracująca z ZSTK przy kierunkach logistyk, spedytor oraz transport kolejowy, oferująca uczniom dostęp do zajęć akademickich i ścieżkę kontynuacji nauki po ukończeniu technikum.',
+    paths:['Technik logistyk','Technik spedytor','Technik transportu kolejowego'],
+    note:'Stała współpraca z wiodącymi przedsiębiorcami z branży TSL na Lubelszczyźnie.'
+  },
+  {
+    id:'wspa', cat:'uczelnie', name:'WSPA — Wyższa Szkoła Przedsiębiorczości i Administracji', logo:'img/wspa.png', keepColor:true,
+    tag:'Uczelnia ekonomiczno-administracyjna, Lublin',
+    desc:'Partner akademicki wspierający uczniów zainteresowanych ścieżką ekonomiczną, administracyjną i zarządczą — uzupełniającą kompetencje zdobywane na kierunkach technicznych ZSTK.',
+    paths:['Ścieżka ekonomiczno-administracyjna','Konsultacje i prelekcje'],
+    note:'Współpraca poszerza ofertę szkoły o aspekty zarządzania i przedsiębiorczości.'
+  },
+  {
+    id:'kza', cat:'kolej', name:'KZA — Przedsiębiorstwo Automatyki i Telekomunikacji', logo:'img/kza.png', keepColor:true,
+    tag:'Automatyka i telekomunikacja kolejowa',
+    desc:'KZA Lublin to firma specjalizująca się w systemach automatyki i telekomunikacji dla sektora kolejowego. Przedstawiciele firmy uczestniczą w wydarzeniach branżowych ZSTK, wspierając kształcenie na kierunkach związanych z infrastrukturą kolejową.',
+    paths:['Technik transportu kolejowego','Technik elektroenergetyk transportu szynowego','Wizyty branżowe'],
+    note:'Jeden z partnerów obecnych podczas Święta Szkoły ZSTK.'
+  },
+  {
+    id:'zditm', cat:'kolej', name:'ZDiTM — Zarząd Dróg i Transportu Miejskiego w Lublinie', logo:'img/zditm.png', keepColor:true,
+    tag:'Miejski zarządca transportu publicznego',
+    desc:'ZDiTM zarządza infrastrukturą drogową i transportem publicznym w Lublinie — w tym siecią autobusową i trolejbusową. Partner naturalnie powiązany z kierunkami logistycznymi i transportowymi szkoły, oferujący wgląd w realia zarządzania miejskim ruchem pasażerskim.',
+    paths:['Technik logistyk','Technik spedytor','Technik transportu kolejowego'],
+    note:'Ważny partner dla uczniów zainteresowanych transportem publicznym i miejską infrastrukturą.'
+  },
+  {
+    id:'abm', cat:'przemysl', name:'ABM Greiffenberger Polska', logo:'img/abm.png', keepColor:true,
+    tag:'Producent napędów elektrycznych',
+    desc:'Lubelski zakład ABM Greiffenberger, działający od 2013 roku, zatrudnia ponad 250 osób i specjalizuje się w produkcji silników elektrycznych oraz montażu gotowych napędów. Uczniowie ZSTK odbywali wizyty zawodowe w tym zakładzie — jeden z ważniejszych lokalnych partnerów przemysłowych szkoły.',
+    paths:['Technik mechatronik','Technik robotyk','Wizyty zawodowe w zakładzie'],
+    note:'Firma aktywnie angażuje się w rozwój lokalnego rynku przemysłowego Lubelszczyzny.'
+  },
+  {
+    id:'armagedon', cat:'przemysl', name:'Armagedon Spedycja', logo:'img/armagedon.png', keepColor:true,
+    tag:'Firma spedycyjna',
+    desc:'Armagedon Spedycja to lubelska firma transportowo-spedycyjna, stanowiąca naturalne środowisko zawodowe dla absolwentów kierunków technik logistyk i technik spedytor. Współpraca umożliwia uczniom zapoznanie się z realnymi procesami spedycji i organizacji transportu.',
+    paths:['Technik logistyk','Technik spedytor','Praktyki zawodowe'],
+    note:'Partner branży TSL wspierający kształcenie zawodowe na kierunkach logistycznych.'
+  },
+  {
+    id:'data_modul', cat:'przemysl', name:'Data Modul', logo:'img/data_modul.png', keepColor:true,
+    tag:'Dostawca rozwiązań display i elektroniki',
+    desc:'Data Modul to międzynarodowy dostawca specjalistycznych wyświetlaczy, systemów wbudowanych i rozwiązań elektronicznych dla przemysłu. Firma stanowi interesującego partnera branżowego dla uczniów kierunków informatycznych i mechatronicznych, zainteresowanych elektroniką przemysłową.',
+    paths:['Technik informatyk','Technik mechatronik','Elektronika przemysłowa'],
+    note:'Partner technologiczny rozszerzający horyzonty uczniów zainteresowanych elektroniką i systemami wbudowanymi.'
+  },
+  {
+    id:'edbak', cat:'przemysl', name:'Edbak', logo:'img/edbak.png', keepColor:true,
+    tag:'Producent mebli i uchwytów do monitorów',
+    desc:'Edbak to firma specjalizująca się w produkcji profesjonalnych uchwytów do monitorów, stacji roboczych i mebli biurowych. Jeden z partnerów przemysłowych ZSTK, wpisujący się w profil kształcenia na kierunkach mechatronicznych i technicznych.',
+    paths:['Technik mechatronik','Wizyty branżowe','Wycieczki zawodowe'],
+    note:'Jeden z partnerów obecnych podczas Święta Szkoły ZSTK.'
+  },
+  {
+    id:'lift_service', cat:'przemysl', name:'Lift Service S.A.', logo:'img/lift_service.png', keepColor:true,
+    tag:'Lubelska Wytwórnia Dźwigów Osobowych',
+    desc:'Lift Service S.A. to lubelski producent dźwigów osobowych — jedna z niewielu w Polsce firm wytwarzających windy kompleksowo, od projektu po montaż i serwis. Partner oferujący uczniom kierunków mechatronicznych i technicznych bezpośredni kontakt z produkcją urządzeń dźwigowych.',
+    paths:['Technik mechatronik','Technik elektroenergetyk transportu szynowego','Wizyty w zakładzie produkcyjnym'],
+    note:'Firma lokalna z wieloletnią tradycją produkcji dźwigów na rynku polskim.'
+  },
+  {
+    id:'asw', cat:'uczelnie', name:'Akademia Sztuki Wojennej', logo:'img/asw.png', keepColor:true,
+    tag:'Uczelnia wojskowo-obronna, Warszawa',
+    desc:'Akademia Sztuki Wojennej objęła ZSTK patronatem w 2018 roku. Uczniowie korzystają z zasobów intelektualnych Akademii, uczestniczą w wykładach, warsztatach, seminariach i forach dyskusyjnych. Szkoła brała udział w Dniach Otwartych ASzWoj oraz zajęła II miejsce w Konkursie Lotniczym Akademii w 2023 roku.',
+    paths:['Technik logistyk','Technik informatyk','Wykłady i warsztaty','Konkursy i projekty'],
+    note:'Patronat podpisany 5 kwietnia 2018 roku przez dyrektor Annę Wawruch-Lis i Prorektora ASzWoj.'
+  },
+  {
+    id:'umcs', cat:'uczelnie', name:'Uniwersytet Marii Curie-Skłodowskiej w Lublinie', logo:'img/umcs.png', keepColor:true,
+    tag:'Największy uniwersytet w Lublinie',
+    desc:'UMCS współpracuje z ZSTK w zakresie kierunków logistycznych, informatycznych i komunikacyjnych. Uczniowie uczestniczyli w Dniu Logistyka organizowanym na uczelni, a szkoła podpisała porozumienie z Instytutem Nauk o Komunikacji Społecznej i Mediach UMCS.',
+    paths:['Technik logistyk','Technik informatyk','Dzień Logistyka','Warsztaty i wykłady'],
+    note:'Jedno z kluczowych partnerstw akademickich ZSTK w Lublinie.'
+  },
+  {
+    id:'umcs_inks', cat:'uczelnie', name:'UMCS — Instytut Nauk o Komunikacji Społecznej i Mediach', logo:'img/umcs_inks.png', keepColor:true,
+    tag:'Instytut UMCS — komunikacja i media',
+    desc:'Instytut Nauk o Komunikacji Społecznej i Mediach UMCS podpisał porozumienie o współpracy z ZSTK, obejmujące warsztaty komunikacyjne, szkolenia oraz wspólne projekty edukacyjne. Porozumienie podpisały dyrektor Anna Wawruch-Lis i dyrektor Instytutu prof. Iwona Hofman.',
+    paths:['Warsztaty komunikacyjne','Szkolenia medialne','Wspólne projekty edukacyjne'],
+    note:'Porozumienie otwiera uczniom dostęp do zasobów akademickich i ekspertów w dziedzinie komunikacji.'
+  }
+];
+
+let activeCat = 'all';
+
+function renderCounts(){
+  document.getElementById('count-all').textContent = PARTNERS.length;
+  ['kolej','przemysl','uczelnie'].forEach(c=>{
+    document.getElementById('count-'+c).textContent = PARTNERS.filter(p=>p.cat===c).length;
+  });
+}
+
+function groupLabel(cat){
+  return CATS[cat] ? CATS[cat].label : cat;
+}
+
+function renderGrid(){
+  const host = document.getElementById('gridHost');
+  host.innerHTML = '';
+
+  const cats = activeCat === 'all' ? ['kolej','przemysl','uczelnie'] : [activeCat];
+
+  cats.forEach(cat=>{
+    const items = PARTNERS.filter(p=>p.cat===cat);
+    if(items.length===0) return;
+
+    const label = document.createElement('div');
+    label.className = 'section-label';
+    label.textContent = groupLabel(cat);
+    host.appendChild(label);
+
+    const grid = document.createElement('div');
+    grid.className = 'grid';
+
+    items.forEach(p=>{
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.style.setProperty('--cat-color', CATS[cat].color);
+      card.innerHTML = `
+        <div class="card-logo ${p.keepColor ? 'keep-color' : ''}">
+          <img src="${p.logo}" alt="${p.name}">
+        </div>
+        <div>
+          <div class="card-name">${p.name}</div>
+          <div class="card-tag">${p.tag}</div>
+        </div>
+        <div class="card-arrow">SZCZEGÓŁY →</div>
+      `;
+      card.addEventListener('click', ()=>openDetail(p, cat));
+      grid.appendChild(card);
+    });
+
+    host.appendChild(grid);
+  });
+}
+
+function openDetail(p, cat){
+  const panel = document.getElementById('detailPanel');
+  const color = CATS[cat].color;
+  panel.style.setProperty('--cat-color', color);
+
+  const qrHtml = (p.praktyki && QR_CODES[p.id]) ? `
+    <div class="qr-section">
+      <div class="qr-canvas-wrap">
+        <img src="${QR_CODES[p.id]}" width="120" height="120" alt="QR kod do oferty praktyk">
+      </div>
+      <div class="qr-text">
+        <div class="qr-label">Praktyki i staże</div>
+        <div class="qr-title">Zeskanuj, aby zobaczyć ofertę</div>
+        <div class="qr-hint">Skieruj aparat telefonu na kod QR — otworzy się strona z aktualnymi ofertami praktyk i staży.</div>
+      </div>
+    </div>
+  ` : '';
+
+  panel.innerHTML = `
+    <div class="detail-head">
+      <div class="detail-logo-wrap">
+        <img src="${p.logo}" alt="${p.name}">
+      </div>
+      <div class="detail-titles">
+        <div class="detail-tag">${p.tag}</div>
+        <div class="detail-name">${p.name}</div>
+      </div>
+      <div class="close-btn" id="closeBtn">✕</div>
+    </div>
+    <div class="detail-body">
+      <div class="detail-desc">${p.desc}</div>
+      <div>
+        <div class="detail-block-title">Ścieżki i możliwości</div>
+        <div class="pill-row">
+          ${p.paths.map(t=>`<span class="pill">${t}</span>`).join('')}
+        </div>
+      </div>
+      ${qrHtml}
+      <div class="detail-footer-note">${p.note}</div>
+    </div>
+  `;
+
+  document.getElementById('closeBtn').addEventListener('click', closeDetail);
+  document.getElementById('overlay').classList.add('open');
+}
+
+function closeDetail(){
+  document.getElementById('overlay').classList.remove('open');
+}
+
+document.getElementById('overlay').addEventListener('click', (e)=>{
+  if(e.target.id === 'overlay') closeDetail();
+});
+
+document.querySelectorAll('.tab').forEach(tab=>{
+  tab.addEventListener('click', ()=>{
+    document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+    tab.classList.add('active');
+    activeCat = tab.dataset.cat;
+    renderGrid();
+    document.getElementById('main').scrollTop = 0;
+  });
+});
+
+function updateClock(){
+  const now = new Date();
+  const hh = String(now.getHours()).padStart(2,'0');
+  const mm = String(now.getMinutes()).padStart(2,'0');
+  document.getElementById('clock').textContent = `${hh}:${mm}`;
+  const days = ['Niedziela','Poniedziałek','Wtorek','Środa','Czwartek','Piątek','Sobota'];
+  const months = ['stycznia','lutego','marca','kwietnia','maja','czerwca','lipca','sierpnia','września','października','listopada','grudnia'];
+  document.getElementById('dateLabel').textContent = `${days[now.getDay()]}, ${now.getDate()} ${months[now.getMonth()]}`;
+}
+updateClock();
+setInterval(updateClock, 15000);
+
+renderCounts();
+renderGrid();
+</script>
+
+</body>
+</html>
